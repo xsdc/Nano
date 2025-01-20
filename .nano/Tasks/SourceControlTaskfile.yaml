@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+    default:
+        desc: "Git overview"
+        cmds:
+            - "git status && echo"
+            - "git log --oneline --graph --decorate --all && echo"
+            - "git branch"
+
+    publish:
+        desc: "Commit all changes and push to remote without message"
+        cmds:
+            - "git add --all && echo"
+            - "git commit -m ':' && echo"
+            - "git push -u origin main"
+
+    publishWithMessage:
+        desc: "Commit all changes and push to remote with message"
+        cmds:
+            - "git add --all && echo"
+            - "git commit {{.CLI_ARGS}} && echo"
+            - "git push -u origin main"

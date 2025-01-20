@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+    default:
+        desc: "Run Sourcery for all templates and watch for changes"
+        cmds:
+            - |
+                sourcery \
+                  --sources Projects/{{.CLI_ARGS}} \
+                  --templates Bots/Audit/Templates \
+                  --output Bots/Audit/Generated \
+                  --prune \
+                  --watch \
+                  --verbose

@@ -1,0 +1,26 @@
+----------------------------------------------------------------------
+{% for type in types.all %}
+    {% if type.annotations.audit %}
+        {% if type.containedTypes.count > 0 %}
+{% if type.name|contains:"." %}	{% endif %}{{type.name}}
+            {% for containedType in type.containedTypes %}
+                {% if containedType.kind == "enum" %}
+{% if type.name|contains:"." %}	{% endif %}├─ {{ containedType.localName }}
+                    {% for case in containedType.cases %}
+{% if type.name|contains:"." %}	{% endif %}│	├─ case: {{ case.name }}
+                        {% for associatedValue in case.associatedValues %}
+{% if type.name|contains:"." %}	{% endif %}│	│	├─ associatedValue: {{ associatedValue.typeName }}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                {% if containedType.kind == "struct" %}
+{% if type.name|contains:"." %}	{% endif %}├─ {{ containedType.localName }}
+                    {% for variable in containedType.rawVariables %}
+{% if type.name|contains:"." %}	{% endif %}│	├─ {% if variable.isMutable %}var{% else %}let{% endif %} {{variable.name}}: {{variable.typeName}} {% if variable.attributes %}(Attributes: {% for attribute in variable.attributes %}{{attribute}}{% if !loop.last %}, {% endif %}{% endfor %}){% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+----------------------------------------------------------------------
+        {% endif %}
+    {% endif %}
+{% endfor %}

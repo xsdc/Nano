@@ -1,0 +1,13 @@
+[project]
+name = "token"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytest>=8.3.4",
+    "pytest-randomly>=3.16.0",
+    "pyyaml>=6.0.2",
+    "rich>=13.9.4",
+    "tiktoken>=0.8.0",
+]

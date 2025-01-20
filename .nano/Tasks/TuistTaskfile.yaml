@@ -1,0 +1,44 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+    MISE: "{{.HOME}}/.local/bin/mise"
+    TUIST: "{{.MISE}} x tuist -- tuist"
+
+tasks:
+    default:
+        desc: "Generate the project using Tuist"
+        cmds:
+            - "{{.TUIST}} install"
+            - "{{.TUIST}} generate"
+
+    setup:
+        desc: "Setup the environment"
+        cmds:
+            - |
+                command -v {{.MISE}} >/dev/null 2>&1 || curl https://mise.jdx.dev/install.sh | sh
+            - "{{.MISE}} install"
+
+    test:
+        desc: "Test the projects"
+        cmds:
+            - "{{.TUIST}} test"
+
+    heat:
+        desc: "Heat task: cache and generate"
+        cmds:
+            - "{{.TUIST}} cache"
+            - "{{.TUIST}} generate"
+
+    update:
+        desc: "Update Tuist and generate without opening"
+        cmds:
+            - "{{.TUIST}} install --update"
+            - "{{.TUIST}} generate --no-open"
+
+    clean:
+        desc: "Clean build artifacts and Tuist"
+        cmds:
+            - "rm -rf Tuist/.build"
+            - "{{.TUIST}} clean"

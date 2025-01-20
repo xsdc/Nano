@@ -1,0 +1,41 @@
+
+CLASSES --------------------------------
+
+{% for type in types.classes %}
+# Enum: {{ type.name }}
+
+Defined In: {{ type.parentName }}
+Location: {{ type.directory }}/{{type.fileName}}
+
+    {% for case in type.cases %}
+Case: {{ case.name }}
+    {% endfor %}
+{% endfor %}
+
+STRUCTS --------------------------------
+
+{% for type in types.structs %}
+# Enum: {{ type.name }}
+
+Defined In: {{ type.parentName }}
+Location: {{ type.directory }}/{{type.fileName}}
+
+    {% for case in type.cases %}
+Case: {{ case.name }}
+    {% endfor %}
+{% endfor %}
+
+ENUMS --------------------------------
+
+{% for type in types.enums %}
+# Enum: {{ type.name }}
+
+Defined In: {{ type.parentName }}
+Location: {{ type.directory }}/{{type.fileName}}
+
+    {% for case in type.cases %}
+Case: {{ case.name }}
+    {% endfor %}
+{% endfor %}
+
+--------------------------------

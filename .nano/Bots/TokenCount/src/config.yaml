@@ -1,0 +1,14 @@
+directories:
+    - Patterns/Object-Oriented/Adapter
+
+models:
+    openai-gpt-3.5-turbo:
+        limits:
+            16K: 16000
+            32K: 32000
+            64K: 64000
+    openai-gpt-4:
+        limits:
+            16K: 16000
+            32K: 32000
+            64K: 64000
