@@ -2,9 +2,11 @@
   <img src="Assets/nanoLight.png" width="192" />
   <br />
   <h3 align="center">Nano</h3>
+  <p align="center">A collection of various aspects of Apple platform development.</p>
 </p>
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Tasks](#tasks)
 - [Bots](#bots)
@@ -12,7 +14,9 @@
 
 ## Overview
 
-A collection of various aspects of Apple platform development. (Work in Progress)
+A collection of various aspects of Apple platform development.
+
+Tasks and bots form a key part of the architecture. These are designed to automate and simplify various aspects of development, testing, and deployment.
 
 ## Tasks
 
