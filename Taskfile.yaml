@@ -3,29 +3,29 @@
 version: "3"
 
 includes:
-    "audit": "Tasks/AuditTaskfile.yaml"
-    "sc": "Tasks/SourceControlTaskfile.yaml"
-    "tuist": "Tasks/TuistTaskfile.yaml"
-    "patterns-abstract_factory": "Projects/Patterns/Object-Oriented/AbstractFactory/Taskfile.yaml"
-    "patterns-adapter": "Projects/Patterns/Object-Oriented/Adapter/Taskfile.yaml"
-    "patterns-bridge": "Projects/Patterns/Object-Oriented/Bridge/Taskfile.yaml"
-    "patterns-builder": "Projects/Patterns/Object-Oriented/Builder/Taskfile.yaml"
-    "patterns-chain_of_responsibility": "Projects/Patterns/Object-Oriented/ChainOfResponsibility/Taskfile.yaml"
-    "patterns-command": "Projects/Patterns/Object-Oriented/Command/Taskfile.yaml"
-    "patterns-composite": "Projects/Patterns/Object-Oriented/Composite/Taskfile.yaml"
-    "patterns-decorator": "Projects/Patterns/Object-Oriented/Decorator/Taskfile.yaml"
-    "patterns-facade": "Projects/Patterns/Object-Oriented/Facade/Taskfile.yaml"
-    "patterns-factory_method": "Projects/Patterns/Object-Oriented/FactoryMethod/Taskfile.yaml"
-    "patterns-mediator": "Projects/Patterns/Object-Oriented/Mediator/Taskfile.yaml"
-    "patterns-memento": "Projects/Patterns/Object-Oriented/Memento/Taskfile.yaml"
-    "patterns-observer": "Projects/Patterns/Object-Oriented/Observer/Taskfile.yaml"
-    "patterns-prototype": "Projects/Patterns/Object-Oriented/Prototype/Taskfile.yaml"
-    "patterns-proxy": "Projects/Patterns/Object-Oriented/Proxy/Taskfile.yaml"
-    "patterns-singleton": "Projects/Patterns/Object-Oriented/Singleton/Taskfile.yaml"
-    "patterns-state": "Projects/Patterns/Object-Oriented/State/Taskfile.yaml"
-    "patterns-strategy": "Projects/Patterns/Object-Oriented/Strategy/Taskfile.yaml"
-    "patterns-template_method": "Projects/Patterns/Object-Oriented/TemplateMethod/Taskfile.yaml"
-    "patterns-visitor": "Projects/Patterns/Object-Oriented/Visitor/Taskfile.yaml"
+    "audit": ".nano/Tasks/AuditTaskfile.yaml"
+    "sc": ".nano/Tasks/SourceControlTaskfile.yaml"
+    "tuist": ".nano/Tasks/TuistTaskfile.yaml"
+    # "patterns-abstract_factory": "Source/Projects/Patterns/Object-Oriented/AbstractFactory/Taskfile.yaml"
+    # "patterns-adapter": "Source/Projects/Patterns/Object-Oriented/Adapter/Taskfile.yaml"
+    # "patterns-bridge": "Source/Projects/Patterns/Object-Oriented/Bridge/Taskfile.yaml"
+    # "patterns-builder": "Source/Projects/Patterns/Object-Oriented/Builder/Taskfile.yaml"
+    # "patterns-chain_of_responsibility": "Source/Projects/Patterns/Object-Oriented/ChainOfResponsibility/Taskfile.yaml"
+    # "patterns-command": "Source/Projects/Patterns/Object-Oriented/Command/Taskfile.yaml"
+    # "patterns-composite": "Source/Projects/Patterns/Object-Oriented/Composite/Taskfile.yaml"
+    # "patterns-decorator": "Source/Projects/Patterns/Object-Oriented/Decorator/Taskfile.yaml"
+    # "patterns-facade": "Source/Projects/Patterns/Object-Oriented/Facade/Taskfile.yaml"
+    # "patterns-factory_method": "Source/Projects/Patterns/Object-Oriented/FactoryMethod/Taskfile.yaml"
+    # "patterns-mediator": "Source/Projects/Patterns/Object-Oriented/Mediator/Taskfile.yaml"
+    # "patterns-memento": "Source/Projects/Patterns/Object-Oriented/Memento/Taskfile.yaml"
+    # "patterns-observer": "Source/Projects/Patterns/Object-Oriented/Observer/Taskfile.yaml"
+    # "patterns-prototype": "Source/Projects/Patterns/Object-Oriented/Prototype/Taskfile.yaml"
+    # "patterns-proxy": "Source/Projects/Patterns/Object-Oriented/Proxy/Taskfile.yaml"
+    # "patterns-singleton": "Source/Projects/Patterns/Object-Oriented/Singleton/Taskfile.yaml"
+    # "patterns-state": "Source/Projects/Patterns/Object-Oriented/State/Taskfile.yaml"
+    # "patterns-strategy": "Source/Projects/Patterns/Object-Oriented/Strategy/Taskfile.yaml"
+    # "patterns-template_method": "Source/Projects/Patterns/Object-Oriented/TemplateMethod/Taskfile.yaml"
+    # "patterns-visitor": "Source/Projects/Patterns/Object-Oriented/Visitor/Taskfile.yaml"
 
 tasks:
     default:
@@ -36,10 +36,10 @@ tasks:
         desc: "Run the token count script"
         cmds:
             - desc: "Run the token count script using uv"
-              cmd: uv run Bots/TokenCount/token_calculator.py Bots/TokenCount/config.yaml Projects
+              cmd: uv run .nano/Bots/TokenCount/token_calculator.py Bots/TokenCount/config.yaml Projects
 
     bot:test_token_count:
         desc: "Run the test suite for the token count script"
         cmds:
             - desc: "Run the test suite using uv"
-              cmd: uv run Bots/TokenCount/test_token_calculator.py {{.TASKDIR}}/Bots/TokenCount/config.yaml {{.TASKDIR}}
+              cmd: uv run .nano/Bots/TokenCount/test_token_calculator.py {{.TASKDIR}}/Bots/TokenCount/config.yaml {{.TASKDIR}}

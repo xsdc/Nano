@@ -9,12 +9,14 @@ vars:
 tasks:
     default:
         desc: "Generate the project using Tuist"
+        dir: "Source"
         cmds:
             - "{{.TUIST}} install"
             - "{{.TUIST}} generate"
 
     setup:
         desc: "Setup the environment"
+        dir: "Source"
         cmds:
             - |
                 command -v {{.MISE}} >/dev/null 2>&1 || curl https://mise.jdx.dev/install.sh | sh
@@ -22,23 +24,27 @@ tasks:
 
     test:
         desc: "Test the projects"
+        dir: "Source"
         cmds:
             - "{{.TUIST}} test"
 
     heat:
         desc: "Heat task: cache and generate"
+        dir: "Source"
         cmds:
             - "{{.TUIST}} cache"
             - "{{.TUIST}} generate"
 
     update:
         desc: "Update Tuist and generate without opening"
+        dir: "Source"
         cmds:
             - "{{.TUIST}} install --update"
             - "{{.TUIST}} generate --no-open"
 
     clean:
         desc: "Clean build artifacts and Tuist"
+        dir: "Source"
         cmds:
             - "rm -rf Tuist/.build"
             - "{{.TUIST}} clean"

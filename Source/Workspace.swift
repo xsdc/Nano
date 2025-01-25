@@ -155,6 +155,5 @@ enum Projects: PathProvider {
 
 let workspace = Workspace(
     name: "nano",
-    projects: projects.map { $0.path },
-    additionalFiles: ["Documentation/**"]
+    projects: projects.map { $0.path }
 )
