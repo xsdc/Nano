@@ -5,33 +5,33 @@ let project = Project(
     organizationName: "Shaun Culver",
     targets: [
         .target(
-            name: "Core",
+            name: "DSACore",
             destinations: .iOS,
             product: .framework,
             bundleId: "dsa.core",
             sources: ["Core/**"]
         ),
         .target(
-            name: "Solutions",
+            name: "DSASolutions",
             destinations: .iOS,
             product: .framework,
             bundleId: "dsa.solutions",
             sources: ["Solutions/**"],
             dependencies: [
-                .target(name: "Core")
+                .target(name: "DSACore")
             ]
         ),
         .target(
-            name: "Tests",
+            name: "DSATests",
             destinations: .iOS,
             product: .unitTests,
             bundleId: "dsa.tests",
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "Core"),
-                .target(name: "Solutions"),
+                .target(name: "DSACore"),
+                .target(name: "DSASolutions"),
             ]
         ),
     ],
-    additionalFiles: ["Bots/**", "Problems/**"]
+    additionalFiles: ["Problems/**"]
 )

@@ -112,19 +112,16 @@ enum Projects: PathProvider {
             var path: Path {
                 switch self {
                 case .all: return Path("Projects/Patterns/Object-Oriented/**")
-                case .abstractFactory:
-                    return Path("Projects/Patterns/Object-Oriented/AbstractFactory/**")
+                case .abstractFactory: return Path("Projects/Patterns/Object-Oriented/AbstractFactory/**")
                 case .adapter: return Path("Projects/Patterns/Object-Oriented/Adapter/**")
                 case .bridge: return Path("Projects/Patterns/Object-Oriented/Bridge/**")
                 case .builder: return Path("Projects/Patterns/Object-Oriented/Builder/**")
-                case .chainOfResponsibility:
-                    return Path("Projects/Patterns/Object-Oriented/ChainOfResponsibility/**")
+                case .chainOfResponsibility: return Path("Projects/Patterns/Object-Oriented/ChainOfResponsibility/**")
                 case .command: return Path("Projects/Patterns/Object-Oriented/Command/**")
                 case .composite: return Path("Projects/Patterns/Object-Oriented/Composite/**")
                 case .decorator: return Path("Projects/Patterns/Object-Oriented/Decorator/**")
                 case .facade: return Path("Projects/Patterns/Object-Oriented/Facade/**")
-                case .factoryMethod:
-                    return Path("Projects/Patterns/Object-Oriented/FactoryMethod/**")
+                case .factoryMethod: return Path("Projects/Patterns/Object-Oriented/FactoryMethod/**")
                 case .iterator: return Path("Projects/Patterns/Object-Oriented/Iterator/**")
                 case .mediator: return Path("Projects/Patterns/Object-Oriented/Mediator/**")
                 case .memento: return Path("Projects/Patterns/Object-Oriented/Memento/**")
@@ -134,8 +131,7 @@ enum Projects: PathProvider {
                 case .singleton: return Path("Projects/Patterns/Object-Oriented/Singleton/**")
                 case .state: return Path("Projects/Patterns/Object-Oriented/State/**")
                 case .strategy: return Path("Projects/Patterns/Object-Oriented/Strategy/**")
-                case .templateMethod:
-                    return Path("Projects/Patterns/Object-Oriented/TemplateMethod/**")
+                case .templateMethod: return Path("Projects/Patterns/Object-Oriented/TemplateMethod/**")
                 case .visitor: return Path("Projects/Patterns/Object-Oriented/Visitor/**")
                 }
             }
@@ -154,6 +150,6 @@ enum Projects: PathProvider {
 }
 
 let workspace = Workspace(
-    name: "nano",
+    name: "Nano",
     projects: projects.map { $0.path }
 )
