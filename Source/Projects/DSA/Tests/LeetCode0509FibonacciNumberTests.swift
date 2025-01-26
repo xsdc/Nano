@@ -1,12 +1,14 @@
-import DSACore
-import DSASolutions
-
 import Testing
-@Test public func testFibonacci() {
-    let problem = Problem<Int, Int>(
+
+import DSACore
+
+@testable import DSASolutions
+
+@Test func testLeetCode0509FibonacciNumber() {
+    Problem<Int, Int>(
         solutions: [
-            Problem.Solution(RecursiveA_LeetCode509FibonacciNumberSolution.self),
-            Problem.Solution(RecursiveN_LeetCode509FibonacciNumberSolution.self)
+            Problem.Solution(RecursiveA_LeetCode0509FibonacciNumber.self),
+            Problem.Solution(RecursiveN_LeetCode0509FibonacciNumber.self)
         ],
         testCases: [
             Problem.TestCase(input: 0, output: 0),
@@ -16,8 +18,7 @@ import Testing
             Problem.TestCase(input: 6, output: 8),
             Problem.TestCase(input: 10, output: 55)
         ]
-    )
-    problem.results.forEach { result in
+    ).results.forEach { result in
         #expect(result == true)
     }
 }
