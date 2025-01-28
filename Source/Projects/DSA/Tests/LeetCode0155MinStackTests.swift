@@ -4,11 +4,10 @@ import DSACore
 
 @testable import DSASolutions
 
-@Test func testLeetCode1929ConcatenationOfArray() {
+@Test func testLeetCode0155MinStack() {
     Problem<[Int], [Int]>(
         solutions: [
-            Problem.Solution(Operator_LeetCode1929ConcatenationOfArray.self),
-            Problem.Solution(Nested_LeetCode1929ConcatenationOfArray.self)
+            Problem.Solution(_LeetCode0155MinStack.self),
         ],
         testCases: [
             Problem.TestCase(
@@ -28,3 +27,4 @@ import DSACore
         #expect(result == true)
     }
 }
+
