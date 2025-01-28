@@ -10,8 +10,8 @@ public struct Problem<Input, Output> where Output: Equatable {
     public struct Solution {
         let execute: (Input) -> Output
         
-        public init<F: FunctionExecuting>(_ fn: F.Type) where F.Input == Input, F.Output == Output {
-            self.execute = fn.execute
+        public init<F: FunctionExecuting>(_ function: F.Type) where F.Input == Input, F.Output == Output {
+            self.execute = function.execute
         }
     }
     

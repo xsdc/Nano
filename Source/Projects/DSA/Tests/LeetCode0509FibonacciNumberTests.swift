@@ -7,8 +7,8 @@ import DSACore
 @Test func testLeetCode0509FibonacciNumber() {
     Problem<Int, Int>(
         solutions: [
-            Problem.Solution(RecursiveA_LeetCode0509FibonacciNumber.self),
-            Problem.Solution(RecursiveN_LeetCode0509FibonacciNumber.self)
+            Problem.Solution(Recursive_LeetCode0509FibonacciNumber.self),
+            Problem.Solution(RecursiveExplicit_LeetCode0509FibonacciNumber.self)
         ],
         testCases: [
             Problem.TestCase(input: 0, output: 0),
