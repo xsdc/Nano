@@ -3,7 +3,6 @@
   <br />
   <h3 align="center">Nano</h3>
   <p align="center">A collection of various aspects of Apple platform development.</p>
-  <p align="center">🚧 Work in Progress 🚧</p>
 </p>
 
 ## Table of Contents
@@ -22,5 +21,3 @@ A collection of various aspects of Apple platform development.
 - Once those are installed, run `task` from the root folder to see the available options.
 - Tuist projects can be included selectively via `Source/Workspace.swift`
 - To get the Xcode workspace up and running: `task tuist`
-
-<p align="center">🚧 Work in Progress 🚧</p>
