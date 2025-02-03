@@ -3,6 +3,9 @@ import DSACore
 
 protocol LeetCode0020ValidParentheses: FunctionExecuting where Input == String, Output == Bool {}
 
+// Time complexity:
+// Space complexity:
+
 struct PreemptiveClosingStack_LeetCode0020ValidParentheses: LeetCode0020ValidParentheses {
     static func execute(_ input: String) -> Bool {
         func isValid(_ s: String) -> Bool {
@@ -27,6 +30,9 @@ struct PreemptiveClosingStack_LeetCode0020ValidParentheses: LeetCode0020ValidPar
         return isValid(input)
     }
 }
+
+// Time complexity:
+// Space complexity:
 
 struct OpeningStack_LeetCode0020ValidParentheses: LeetCode0020ValidParentheses {
     static func execute(_ input: String) -> Bool {
@@ -54,6 +60,9 @@ struct OpeningStack_LeetCode0020ValidParentheses: LeetCode0020ValidParentheses {
         return isValid(input)
     }
 }
+
+// Time complexity:
+// Space complexity:
 
 struct BruteForce_LeetCode0020ValidParentheses: LeetCode0020ValidParentheses {
     static func execute(_ input: String) -> Bool {

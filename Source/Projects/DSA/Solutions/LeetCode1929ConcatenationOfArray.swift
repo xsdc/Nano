@@ -2,6 +2,9 @@ import DSACore
 
 protocol LeetCode1929ConcatenationOfArray: FunctionExecuting where Input == [Int], Output == [Int] {}
 
+// Time complexity:
+// Space complexity:
+
 struct Operator_LeetCode1929ConcatenationOfArray: LeetCode1929ConcatenationOfArray {
     static func execute(_ input: [Int]) -> [Int] {
         func getConcatenation(_ nums: [Int]) -> [Int] {
@@ -11,6 +14,9 @@ struct Operator_LeetCode1929ConcatenationOfArray: LeetCode1929ConcatenationOfArr
         return getConcatenation(input)
     }
 }
+
+// Time complexity:
+// Space complexity:
 
 struct Nested_LeetCode1929ConcatenationOfArray: LeetCode1929ConcatenationOfArray {
     static func execute(_ input: [Int]) -> [Int] {

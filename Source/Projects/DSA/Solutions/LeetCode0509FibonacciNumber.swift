@@ -2,6 +2,9 @@ import DSACore
 
 protocol LeetCode0509FibonacciNumber: FunctionExecuting where Input == Int, Output == Int {}
 
+// Time complexity:
+// Space complexity:
+
 struct Recursive_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
     static func execute(_ input: Int) -> Int {
         func fib(_ n: Int) -> Int {
@@ -12,6 +15,9 @@ struct Recursive_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
         return fib(input)
     }
 }
+
+// Time complexity:
+// Space complexity:
 
 struct RecursiveExplicit_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
     static func execute(_ input: Int) -> Int {

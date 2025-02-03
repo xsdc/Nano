@@ -17,6 +17,9 @@ struct LeetCode0155Output: Equatable  {
 
 protocol LeetCode0155MinStack: FunctionExecuting where Input == LeetCode0155Input, Output == LeetCode0155Output {}
 
+// Time complexity:
+// Space complexity:
+
 struct Array_LeetCode0155MinStack: LeetCode0155MinStack {
     static func execute(_ input: LeetCode0155Input) -> LeetCode0155Output {
         let minStack = MinStack()

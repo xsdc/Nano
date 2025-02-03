@@ -7,6 +7,9 @@ struct LeetCode0020Output: Equatable {
 
 protocol LeetCode0020RemoveDuplicatesFromSortedArray: FunctionExecuting where Input == [Int], Output == LeetCode0020Output {}
 
+// Time complexity:
+// Space complexity:
+
 struct Pointers_LeetCode0020RemoveDuplicatesFromSortedArray: LeetCode0020RemoveDuplicatesFromSortedArray {
     static func execute(_ input: [Int]) -> LeetCode0020Output {
         func removeDuplicates(_ nums: inout [Int]) -> Int {
