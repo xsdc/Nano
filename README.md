@@ -11,10 +11,14 @@
 
 - [Overview](#overview)
 - [Setup](#setup)
+- [Roadmap](#roadmap)
 
 ## Overview
 
 A collection of various aspects of Apple platform development.
+
+- 💡 LeetCode solutions: `Source/Projects/DSA`
+- 📦 Object-oriented patterns with [TMA architecture](https://docs.tuist.dev/en/guides/develop/projects/tma-architecture): `Source/Projects/Patterns/ObjectOriented`
 
 ## Setup
 
@@ -23,3 +27,8 @@ A collection of various aspects of Apple platform development.
 - Once those are installed, run `task` from the root folder to see the available options.
 - Tuist projects can be included selectively via `Source/Workspace.swift`
 - To get the Xcode workspace up and running: `task tuist`
+
+## Roadmap
+
+- 🛠️ Functional patterns
+- 🚦 Concurrency
