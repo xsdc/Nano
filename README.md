@@ -17,7 +17,7 @@
 
 A collection of various aspects of Apple platform development.
 
-- 💡 LeetCode solutions: `Source/Projects/DSA`
+- 💡 LeetCode solutions and test cases: `Source/Projects/DSA`
 - 📦 Object-oriented patterns with [TMA architecture](https://docs.tuist.dev/en/guides/develop/projects/tma-architecture): `Source/Projects/Patterns/ObjectOriented`
 
 ## Setup
