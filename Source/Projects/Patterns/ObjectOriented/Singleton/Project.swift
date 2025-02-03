@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "SingletonAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.singleton.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "SingletonConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.singleton.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "SingletonAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "SingletonKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.singleton.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "SingletonMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "SingletonKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.singleton.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "SingletonMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "SingletonMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.singleton.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "SingletonAbstractions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "SingletonTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.singleton.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "SingletonMocks"),

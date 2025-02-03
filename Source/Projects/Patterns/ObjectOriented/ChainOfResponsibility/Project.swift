@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "ChainOfResponsibilityAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.chain-of-responsibility.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "ChainOfResponsibilityConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.chain-of-responsibility.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "ChainOfResponsibilityAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "ChainOfResponsibilityKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.chain-of-responsibility.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "ChainOfResponsibilityMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "ChainOfResponsibilityKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.chain-of-responsibility.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "ChainOfResponsibilityMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "ChainOfResponsibilityMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.chain-of-responsibility.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "ChainOfResponsibilityConcretions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "ChainOfResponsibilityTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.chain-of-responsibility.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "ChainOfResponsibilityMocks"),

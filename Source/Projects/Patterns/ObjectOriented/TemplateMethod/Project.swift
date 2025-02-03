@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "TemplateMethodAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.template-method.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "TemplateMethodConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.template-method.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "TemplateMethodAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "TemplateMethodKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.template-method.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "TemplateMethodMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "TemplateMethodKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.template-method.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "TemplateMethodMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "TemplateMethodMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.template-method.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "TemplateMethodConcretions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "TemplateMethodTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.template-method.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "TemplateMethodMocks"),

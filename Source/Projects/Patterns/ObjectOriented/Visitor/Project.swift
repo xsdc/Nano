@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "VisitorAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.visitor.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "VisitorConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.visitor.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "VisitorAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "VisitorKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.visitor.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "VisitorMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "VisitorKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.visitor.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "VisitorMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "VisitorMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.visitor.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "VisitorConcretions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "VisitorTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.visitor.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "VisitorMocks"),

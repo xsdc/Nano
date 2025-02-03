@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "StateAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.state.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "StateConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.state.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "StateAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "StateKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.state.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "StateMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "StateKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.state.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "StateMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "StateMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.state.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "StateConcretions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "StateTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.state.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "StateMocks"),

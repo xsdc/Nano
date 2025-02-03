@@ -23,16 +23,18 @@ let project = Project(
         //),
         .target(
             name: "CompositeAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.composite.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Abstractions/**"]
         ),
         .target(
             name: "CompositeMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.composite.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Mocks/**"],
             dependencies: [
                 .target(name: "CompositeConcretions")
@@ -40,9 +42,10 @@ let project = Project(
         ),
         .target(
             name: "CompositeConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.composite.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Concretions/**"],
             dependencies: [
                 .external(name: "ComposableArchitecture"),
@@ -51,7 +54,7 @@ let project = Project(
         ),
         //.target(
         //    name: "CompositeExamples",
-        //    destinations: .iOS,
+        //    destinations: .macOS,
         //    product: .framework,
         //    bundleId: "com.apple.store.composite.examples",
         //    sources: ["Targets/Frameworks/Examples/**"],
@@ -63,9 +66,10 @@ let project = Project(
         //),
         .target(
             name: "CompositeKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.composite.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Katas/Final/**"],
             dependencies: [
                 .target(name: "CompositeMocks"),
@@ -74,9 +78,10 @@ let project = Project(
         ),
         .target(
             name: "CompositeKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.composite.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Katas/Initial/**"],
             dependencies: [
                 .target(name: "CompositeMocks"),
@@ -85,9 +90,10 @@ let project = Project(
         ),
         .target(
             name: "CompositeTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.composite.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Frameworks/Tests/**"],
             dependencies: [
                 .external(name: "ComposableArchitecture"),

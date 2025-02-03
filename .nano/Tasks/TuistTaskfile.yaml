@@ -52,3 +52,9 @@ tasks:
         cmds:
             - "rm -rf Tuist/.build"
             - "{{.TUIST}} clean"
+
+    install:
+        desc: "Clean build artifacts and Tuist"
+        dir: "Source"
+        cmds:
+            - "{{.TUIST}} install"

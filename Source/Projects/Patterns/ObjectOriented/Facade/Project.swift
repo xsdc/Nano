@@ -6,9 +6,10 @@ let project = Project(
     targets: [
         .target(
             name: "FacadeAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.facade.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"],
             dependencies: [
                 .target(name: "FacadeConcretions")
@@ -16,16 +17,18 @@ let project = Project(
         ),
         .target(
             name: "FacadeConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.facade.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"]
         ),
         .target(
             name: "FacadeKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.facade.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "FacadeMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "FacadeKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.facade.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "FacadeMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "FacadeMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.facade.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "FacadeConcretions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "FacadeTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.facade.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "FacadeMocks"),

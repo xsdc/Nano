@@ -11,6 +11,7 @@
 
 - [Overview](#overview)
 - [Setup](#setup)
+- [Tasks](#tasks)
 - [Roadmap](#roadmap)
 
 ## Overview
@@ -25,8 +26,15 @@ A collection of various aspects of Apple platform development.
 - Install Task: https://taskfile.dev/installation
 - Install Mise: https://mise.jdx.dev/installing-mise.html
 - Once those are installed, run `task` from the root folder to see the available options.
+
+## Tasks
+
+### Tuist
+
 - Tuist projects can be included selectively via `Source/Workspace.swift`
-- To get the Xcode workspace up and running: `task tuist`
+- Install dependencies: `task tuist:install`
+- Run the tests: `task tuist:test`
+- Generate the Xcode workspace: `task tuist`
 
 ## Roadmap
 

@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "FactoryMethodAbstractions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.factory-method.abstractions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Abstractions/**"]
         ),
         .target(
             name: "FactoryMethodConcretions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.factory-method.concretions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Concretions/**"],
             dependencies: [
                 .target(name: "FactoryMethodAbstractions")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "FactoryMethodKatasFinal",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.factory-method.katas-final",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Final/**"],
             dependencies: [
                 .target(name: "FactoryMethodMocks"),
@@ -34,9 +37,10 @@ let project = Project(
         ),
         .target(
             name: "FactoryMethodKatasInitial",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.factory-method.katas-initial",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Katas/Initial/**"],
             dependencies: [
                 .target(name: "FactoryMethodMocks"),
@@ -45,9 +49,10 @@ let project = Project(
         ),
         .target(
             name: "FactoryMethodMocks",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "com.apple.store.factory-method.mocks",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Mocks/**"],
             dependencies: [
                 .target(name: "FactoryMethodAbstractions")
@@ -55,9 +60,10 @@ let project = Project(
         ),
         .target(
             name: "FactoryMethodTests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "com.apple.store.factory-method.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Targets/Tests/**"],
             dependencies: [
                 .target(name: "FactoryMethodMocks"),
