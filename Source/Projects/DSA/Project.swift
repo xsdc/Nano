@@ -32,6 +32,5 @@ let project = Project(
                 .target(name: "DSASolutions"),
             ]
         ),
-    ],
-    additionalFiles: ["Problems/**"]
+    ]
 )

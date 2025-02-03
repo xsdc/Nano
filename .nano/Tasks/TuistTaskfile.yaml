@@ -3,7 +3,7 @@
 version: "3"
 
 vars:
-    MISE: "{{.HOME}}/.local/bin/mise"
+    MISE: "mise"
     TUIST: "{{.MISE}} x tuist -- tuist"
 
 tasks:
@@ -14,12 +14,16 @@ tasks:
             - "{{.TUIST}} install"
             - "{{.TUIST}} generate"
 
-    setup:
+    setup-mise:
         desc: "Setup the environment"
         dir: "Source"
         cmds:
-            - |
-                command -v {{.MISE}} >/dev/null 2>&1 || curl https://mise.jdx.dev/install.sh | sh
+            - command -v {{.MISE}} >/dev/null 2>&1 || curl https://mise.jdx.dev/install.sh | sh
+
+    setup-mise-deps:
+        desc: "Setup the environment"
+        dir: "Source"
+        cmds:
             - "{{.MISE}} install"
 
     test:
