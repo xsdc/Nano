@@ -39,6 +39,7 @@ A collection of various aspects of Apple platform development.
 ## Roadmap
 
 - 🚦 Concurrency
+- 💵 Stripe SDK experiment
 - 🎛️ The Composable Architecture experiments
 - 🗺️ MapKit experiments: `Source/Projects/Experiments/MapKit`
 - 🛠️ Functional patterns
