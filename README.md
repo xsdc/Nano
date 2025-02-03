@@ -2,7 +2,7 @@
   <img src="Assets/nanoLight.png" width="192" />
   <br />
   <h3 align="center">Nano</h3>
-  <p align="center">A collection of various aspects of Apple platform development.</p>
+  <p align="center">Various aspects of Apple platform development</p>
 </p>
 
 <br />
