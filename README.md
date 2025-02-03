@@ -5,7 +5,9 @@
   <p align="center">A collection of various aspects of Apple platform development.</p>
 </p>
 
-## Table of Contents
+<br />
+
+## Contents
 
 - [Overview](#overview)
 - [Setup](#setup)
