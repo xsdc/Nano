@@ -6,16 +6,18 @@ let project = Project(
     targets: [
         .target(
             name: "DSACore",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "dsa.core",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Core/**"]
         ),
         .target(
             name: "DSASolutions",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .framework,
             bundleId: "dsa.solutions",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Solutions/**"],
             dependencies: [
                 .target(name: "DSACore")
@@ -23,9 +25,10 @@ let project = Project(
         ),
         .target(
             name: "DSATests",
-            destinations: .iOS,
+            destinations: .macOS,
             product: .unitTests,
             bundleId: "dsa.tests",
+            deploymentTargets: .macOS("15.1.1"),
             sources: ["Tests/**"],
             dependencies: [
                 .target(name: "DSACore"),
