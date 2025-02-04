@@ -14,5 +14,5 @@
 - [x] 1929 Concatenation of Array
 - [x] 0020 Valid Parentheses
 - [x] 0155 Min Stack
-- [x] 0206 Reverse Linked List
+- [ ] 0206 Reverse Linked List
 - [ ] 0021 Merge Two Sorted Lists
