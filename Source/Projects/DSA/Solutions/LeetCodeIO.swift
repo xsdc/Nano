@@ -20,17 +20,19 @@ protocol LeetCode0026RemoveDuplicatesFromSortedArray: FunctionExecuting where In
 
 // 0027. Remove Element
 
-struct LeetCode0027Input {
-    let nums: [Int]
-    let val: Int
+struct LeetCode0027 {
+    struct Input {
+        let nums: [Int]
+        let val: Int
+    }
+
+    struct Output: Equatable {
+        let nums: [Int]
+        let notValCount: Int
+    }
 }
 
-struct LeetCode0027Output: Equatable {
-    let nums: [Int]
-    let notValCount: Int
-}
-
-protocol LeetCode0027RemoveElement: FunctionExecuting where Input == LeetCode0027Input, Output == LeetCode0027Output {}
+protocol LeetCode0027RemoveElement: FunctionExecuting where Input == LeetCode0027.Input, Output == LeetCode0027.Output {}
 
 // 0155. Min Stack
 

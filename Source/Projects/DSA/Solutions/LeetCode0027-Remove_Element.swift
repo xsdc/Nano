@@ -3,7 +3,7 @@
 // Space complexity:
 
 struct PointersA_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
-    static func execute(_ input: LeetCode0027Input) -> LeetCode0027Output {
+    static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
             var q = nums.count
@@ -24,7 +24,7 @@ struct PointersA_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
         var mutableInput = input.nums
         let notValCount = removeElement(&mutableInput, input.val)
 
-        return LeetCode0027Output(
+        return LeetCode0027.Output(
             nums: mutableInput,
             notValCount: notValCount
         )
@@ -35,7 +35,7 @@ struct PointersA_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
 // Space complexity:
 
 struct PointersB_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
-    static func execute(_ input: LeetCode0027Input) -> LeetCode0027Output {
+    static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
 
@@ -52,7 +52,7 @@ struct PointersB_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
         var mutableInput = input.nums
         let notValCount = removeElement(&mutableInput, input.val)
 
-        return LeetCode0027Output(
+        return LeetCode0027.Output(
             nums: mutableInput,
             notValCount: notValCount
         )
