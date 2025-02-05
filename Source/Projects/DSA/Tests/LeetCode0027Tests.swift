@@ -6,7 +6,7 @@ import DSACore
 @Test func testLeetCode0027RemoveElement_PointersA() {
     Problem<LeetCode0027.Input, LeetCode0027.Output>(
         solutions: [
-            Problem.Solution(PointersA_LeetCode0020RemoveElement.self)
+            Problem.Solution(PointersA_LeetCode0027Solution.self)
         ],
         testCases: [
             Problem.TestCase(
@@ -108,7 +108,7 @@ import DSACore
 @Test func testLeetCode0027RemoveElement_PointersB() {
     Problem<LeetCode0027.Input, LeetCode0027.Output>(
         solutions: [
-            Problem.Solution(PointersB_LeetCode0020RemoveElement.self)
+            Problem.Solution(PointersB_LeetCode0027Solution.self)
         ],
         testCases: [
             Problem.TestCase(

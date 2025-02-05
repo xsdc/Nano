@@ -1,8 +1,23 @@
+import DSACore
+
+struct LeetCode0027 {
+    struct Input {
+        let nums: [Int]
+        let val: Int
+    }
+
+    struct Output: Equatable {
+        let nums: [Int]
+        let notValCount: Int
+    }
+}
+
+protocol LeetCode0027Solution: FunctionExecuting where Input == LeetCode0027.Input, Output == LeetCode0027.Output {}
 
 // Time complexity:
 // Space complexity:
 
-struct PointersA_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
+struct PointersA_LeetCode0027Solution: LeetCode0027Solution {
     static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
@@ -34,7 +49,7 @@ struct PointersA_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
 // Time complexity:
 // Space complexity:
 
-struct PointersB_LeetCode0020RemoveElement: LeetCode0027RemoveElement {
+struct PointersB_LeetCode0027Solution: LeetCode0027Solution {
     static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
