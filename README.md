@@ -18,9 +18,6 @@
 
 A collection of various aspects of Apple platform development.
 
-- 💡 LeetCode solutions and tests: [Checklist](Documentation/LeetCodeChecklist.md)
-- 📦 Object-oriented patterns with [TMA architecture](https://docs.tuist.dev/en/guides/develop/projects/tma-architecture): `Source/Projects/Patterns/ObjectOriented`
-
 ## Setup
 
 - Install Task: https://taskfile.dev/installation
@@ -28,9 +25,12 @@ A collection of various aspects of Apple platform development.
 - Once those are installed, run `task` from the root folder to see the available options.
 - Tuist projects can be included selectively via `Source/Workspace.swift`
 
-## Tasks
+## Projects
 
-### Tuist
+- 💡 LeetCode solutions: [Checklist](Documentation/LeetCodeChecklist.md) | `Source/Projects/DSA`
+- 📦 Object-oriented patterns within a [TMA architecture](https://docs.tuist.dev/en/guides/develop/projects/tma-architecture): `Source/Projects/Patterns/ObjectOriented`
+
+## Tasks
 
 - Install dependencies: `task tuist:install`
 - Run the tests: `task tuist:test`
