@@ -16,5 +16,5 @@ tasks:
             - "git add --all && echo"
             - |
                 MESSAGE="{{.CLI_ARGS}}"
-                git commit -m "$MESSAGE" && echo
+                eval "git commit -m \"$MESSAGE\"" && echo
             - "git push -u origin main"
