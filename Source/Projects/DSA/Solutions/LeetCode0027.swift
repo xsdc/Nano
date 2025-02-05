@@ -18,7 +18,7 @@ protocol LeetCode0027Solution: FunctionExecuting where Input == LeetCode0027.Inp
 // Space complexity:
 
 struct PointersA_LeetCode0027Solution: LeetCode0027Solution {
-    static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
+    static func execute(input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
             var q = nums.count
@@ -50,7 +50,7 @@ struct PointersA_LeetCode0027Solution: LeetCode0027Solution {
 // Space complexity:
 
 struct PointersB_LeetCode0027Solution: LeetCode0027Solution {
-    static func execute(_ input: LeetCode0027.Input) -> LeetCode0027.Output {
+    static func execute(input: LeetCode0027.Input) -> LeetCode0027.Output {
         func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
             var p = 0
 

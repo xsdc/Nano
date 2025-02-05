@@ -16,7 +16,7 @@ protocol LeetCode1929Solution: FunctionExecuting where Input == LeetCode1929.Inp
 // Space complexity:
 
 struct Operator_LeetCode1929Solution: LeetCode1929Solution {
-    static func execute(_ input: LeetCode1929.Input) -> LeetCode1929.Output {
+    static func execute(input: LeetCode1929.Input) -> LeetCode1929.Output {
         func getConcatenation(_ nums: [Int]) -> [Int] {
             return nums + nums
         }
@@ -31,7 +31,7 @@ struct Operator_LeetCode1929Solution: LeetCode1929Solution {
 // Space complexity:
 
 struct Nested_LeetCode1929Solution: LeetCode1929Solution {
-    static func execute(_ input: LeetCode1929.Input) -> LeetCode1929.Output {
+    static func execute(input: LeetCode1929.Input) -> LeetCode1929.Output {
         func getConcatenation(_ nums: [Int]) -> [Int] {
             var array = [Int]()
 

@@ -16,7 +16,7 @@ protocol LeetCode0020Solution: FunctionExecuting where Input == LeetCode0020.Inp
 // Space complexity:
 
 struct PreemptiveClosingStack_LeetCode0020Solution: LeetCode0020Solution {
-    static func execute(_ input: LeetCode0020.Input) -> LeetCode0020.Output {
+    static func execute(input: LeetCode0020.Input) -> LeetCode0020.Output {
         func isValid(_ s: String) -> Bool {
             guard s.count % 2 == 0 else { return false }
 
@@ -46,7 +46,7 @@ struct PreemptiveClosingStack_LeetCode0020Solution: LeetCode0020Solution {
 // Space complexity:
 
 struct OpeningStack_LeetCode0020Solution: LeetCode0020Solution {
-    static func execute(_ input: LeetCode0020.Input) -> LeetCode0020.Output {
+    static func execute(input: LeetCode0020.Input) -> LeetCode0020.Output {
         func isValid(_ s: String) -> Bool {
             var stack = [Character]()
             let brackets: [Character: Character] = [")": "(", "]": "[", "}": "{"]
@@ -78,7 +78,7 @@ struct OpeningStack_LeetCode0020Solution: LeetCode0020Solution {
 // Space complexity:
 
 struct BruteForce_LeetCode0020Solution: LeetCode0020Solution {
-    static func execute(_ input: LeetCode0020.Input) -> LeetCode0020.Output {
+    static func execute(input: LeetCode0020.Input) -> LeetCode0020.Output {
         func isValid(_ s: String) -> Bool {
             var string = s
 

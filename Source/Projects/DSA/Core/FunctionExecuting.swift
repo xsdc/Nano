@@ -1,7 +1,7 @@
 
-public protocol FunctionExecuting where Output: Equatable {
+public protocol FunctionExecuting {
     associatedtype Input
-    associatedtype Output
+    associatedtype Output: Equatable
 
-    static func execute(_ input: Input) -> Output
+    static func execute(input: Input) -> Output
 }

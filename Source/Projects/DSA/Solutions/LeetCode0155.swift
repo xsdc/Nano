@@ -23,7 +23,7 @@ protocol LeetCode0155Solution: FunctionExecuting where Input == LeetCode0155.Inp
 // Space complexity:
 
 struct Array_LeetCode0155Solution: LeetCode0155Solution {
-    static func execute(_ input: LeetCode0155.Input) -> LeetCode0155.Output {
+    static func execute(input: LeetCode0155.Input) -> LeetCode0155.Output {
         class MinStack {
             var valStack: [Int]
             var minStack: [Int]

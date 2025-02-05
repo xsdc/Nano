@@ -7,7 +7,7 @@ protocol LeetCode0021MergeTwoSortedLists: FunctionExecuting where Input == Strin
 // Space complexity:
 
 struct _LeetCode0021MergeTwoSortedLists: LeetCode0021MergeTwoSortedLists {
-    static func execute(_ input: String) -> Bool {
+    static func execute(input: String) -> Bool {
         return true
     }
     

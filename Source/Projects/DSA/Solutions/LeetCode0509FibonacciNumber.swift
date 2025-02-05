@@ -6,7 +6,7 @@ protocol LeetCode0509FibonacciNumber: FunctionExecuting where Input == Int, Outp
 // Space complexity:
 
 struct Recursive_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
-    static func execute(_ input: Int) -> Int {
+    static func execute(input: Int) -> Int {
         func fib(_ n: Int) -> Int {
             if n <= 1 { return n }
             return fib(n - 1) + fib(n - 2)
@@ -20,7 +20,7 @@ struct Recursive_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
 // Space complexity:
 
 struct RecursiveExplicit_LeetCode0509FibonacciNumber: LeetCode0509FibonacciNumber {
-    static func execute(_ input: Int) -> Int {
+    static func execute(input: Int) -> Int {
         func fn(_ n: Int) -> Int {
             if n == 0 { return 0 }
             if n == 1 { return 1 }
