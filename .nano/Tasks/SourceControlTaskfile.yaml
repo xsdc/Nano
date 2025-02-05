@@ -11,15 +11,15 @@ tasks:
             - "git branch"
 
     publish:
-        desc: "Commit all changes and push to remote without message"
-        cmds:
-            - "git add --all && echo"
-            - "git commit -m ':' && echo"
-            - "git push -u origin main"
-
-    publishWithMessage:
         desc: "Commit all changes and push to remote with message"
         cmds:
-            - "git add --all && echo"
-            - "git commit {{.CLI_ARGS}} && echo"
+            - 'echo "Commit message: {{.CLI_ARGS}}"'
+            - |
+                if [ -z "{{.CLI_ARGS}}" ]; then
+                    echo "Commit message is required"
+                    echo "Usage: task publish -- \"Your commit message\""
+                    exit 1
+                fi
+                git add --all && echo
+                git commit -m "{{.CLI_ARGS}}" && echo
             - "git push -u origin main"

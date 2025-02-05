@@ -1,4 +1,5 @@
 import DSACore
+import Foundation
 
 struct LeetCode0020 {
     struct Input {

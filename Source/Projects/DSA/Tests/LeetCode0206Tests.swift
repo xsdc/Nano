@@ -7,6 +7,7 @@ import DSACore
     Problem<LeetCode0206.Input, LeetCode0206.Output>(
         solutions: [
             Problem.Solution(Pointer_LeetCode0206Solution.self),
+            Problem.Solution(Recursive_LeetCode0206Solution.self),
         ],
         testCases: [
             Problem.TestCase(
