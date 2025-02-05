@@ -7,7 +7,7 @@ import DSACore
 @Test func testLeetCode0026RemoveDuplicatesFromSortedArray() {
     Problem<LeetCode0026.Input, LeetCode0026.Output>(
         solutions: [
-            Problem.Solution(Pointers_LeetCode0026Solution.self)
+            Problem.Solution(Pointer_LeetCode0026Solution.self)
         ],
         testCases: [
             Problem.TestCase(

@@ -16,7 +16,7 @@ protocol LeetCode0026Solution: FunctionExecuting where Input == LeetCode0026.Inp
 // Time complexity:
 // Space complexity:
 
-struct Pointers_LeetCode0026Solution: LeetCode0026Solution {
+struct Pointer_LeetCode0026Solution: LeetCode0026Solution {
     static func execute(input: LeetCode0026.Input) -> LeetCode0026.Output {
         func removeDuplicates(_ nums: inout [Int]) -> Int {
             if nums.isEmpty { return 0 }
