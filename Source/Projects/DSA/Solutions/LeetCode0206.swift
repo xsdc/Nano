@@ -1,18 +1,18 @@
 import DSACore
 
 /**
- *Given the `head` of a singly linked list, reverse the list, and return the __reversed list__.*
- - ID: 0206
- - Problem: Reverse Linked List
- - Difficulty: Easy
- - Constraints:
+Given the `head` of a singly linked list, reverse the list, and return the _reversed list_.
+- ID: 0206
+- Problem: [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- Difficulty: Easy
+- Constraints:
     - The number of nodes in the list is the range `[0, 5000]`.
     - `-5000 <= Node.val <= 5000`
- - Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
- - Topics:
+- Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+- Topics:
     - Linked List
     - Recursion
- */
+*/
 struct LeetCode0206 {
     struct Input {
         let head: ListNode?
