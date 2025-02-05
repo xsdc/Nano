@@ -4,7 +4,7 @@ version: "3"
 
 includes:
     "audit": ".nano/Tasks/AuditTaskfile.yaml"
-    "sc": ".nano/Tasks/SourceControlTaskfile.yaml"
+    "git": ".nano/Tasks/SourceControlTaskfile.yaml"
     "tuist": ".nano/Tasks/TuistTaskfile.yaml"
     # "patterns-abstract_factory": "Source/Projects/Patterns/Object-Oriented/AbstractFactory/Taskfile.yaml"
     # "patterns-adapter": "Source/Projects/Patterns/Object-Oriented/Adapter/Taskfile.yaml"
