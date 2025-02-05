@@ -13,8 +13,7 @@ tasks:
     publish:
         desc: "Commit all changes and push to remote with message"
         cmds:
-            - 'echo "Commit message: {{.CLI_ARGS}}"'
             - |
                 git add --all && echo
                 git commit -m "{{.CLI_ARGS}}" && echo
-            - "git push -u origin main"
+                git push -u origin main
