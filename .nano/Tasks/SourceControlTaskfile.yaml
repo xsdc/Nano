@@ -15,11 +15,6 @@ tasks:
         cmds:
             - 'echo "Commit message: {{.CLI_ARGS}}"'
             - |
-                if [ -z "{{.CLI_ARGS}}" ]; then
-                    echo "Commit message is required"
-                    echo "Usage: task publish -- \"Your commit message\""
-                    exit 1
-                fi
                 git add --all && echo
                 git commit -m "{{.CLI_ARGS}}" && echo
             - "git push -u origin main"
