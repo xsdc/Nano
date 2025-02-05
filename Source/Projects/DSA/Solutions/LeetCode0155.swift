@@ -36,11 +36,9 @@ struct Array_LeetCode0155Solution: LeetCode0155Solution {
             func push(_ val: Int) {
                 valStack.append(val)
 
-                guard let last = minStack.last else {
-                    return minStack.append(val)
-                }
+                guard let last = minStack.last else { return minStack.append(val) }
+                
                 let min = min(val, last)
-
                 minStack.append(min)
             }
 
@@ -50,18 +48,12 @@ struct Array_LeetCode0155Solution: LeetCode0155Solution {
             }
 
             func top() -> Int {
-                guard let last = valStack.last else {
-                    return 0
-                }
-
+                guard let last = valStack.last else { return 0 }
                 return last
             }
 
             func getMin() -> Int {
-                guard let lastMin = minStack.last else {
-                    return 0
-                }
-
+                guard let lastMin = minStack.last else { return 0 }
                 return lastMin
             }
         }

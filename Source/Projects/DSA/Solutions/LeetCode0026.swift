@@ -21,20 +21,20 @@ struct Pointers_LeetCode0026Solution: LeetCode0026Solution {
         func removeDuplicates(_ nums: inout [Int]) -> Int {
             if nums.isEmpty { return 0 }
 
-            var left = 1
+            var p = 1
 
-            for right in 1..<nums.count {
-                if nums[left - 1] != nums[right] {
-                    nums[left] = nums[right]
-                    left += 1
+            for q in 1..<nums.count {
+                if nums[p - 1] != nums[q] {
+                    nums[p] = nums[q]
+                    p += 1
                 }
             }
 
-            for i in left..<nums.count {
+            for i in p..<nums.count {
                 nums[i] = 0
             }
 
-            return left
+            return p
         }
 
         var mutableInput = input.nums
