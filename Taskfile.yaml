@@ -32,14 +32,14 @@ tasks:
         desc: "List tasks"
         cmd: task --list
 
-    bot:token_count:
-        desc: "Run the token count script"
-        cmds:
-            - desc: "Run the token count script using uv"
-              cmd: uv run .nano/Bots/TokenCount/token_calculator.py Bots/TokenCount/config.yaml Projects
+    # bot:token_count:
+    #     desc: "Run the token count script"
+    #     cmds:
+    #         - desc: "Run the token count script using uv"
+    #           cmd: uv run .nano/Bots/TokenCount/token_calculator.py Bots/TokenCount/config.yaml Projects
 
-    bot:test_token_count:
-        desc: "Run the test suite for the token count script"
-        cmds:
-            - desc: "Run the test suite using uv"
-              cmd: uv run .nano/Bots/TokenCount/test_token_calculator.py {{.TASKDIR}}/Bots/TokenCount/config.yaml {{.TASKDIR}}
+    # bot:test_token_count:
+    #     desc: "Run the test suite for the token count script"
+    #     cmds:
+    #         - desc: "Run the test suite using uv"
+    #           cmd: uv run .nano/Bots/TokenCount/test_token_calculator.py {{.TASKDIR}}/Bots/TokenCount/config.yaml {{.TASKDIR}}
