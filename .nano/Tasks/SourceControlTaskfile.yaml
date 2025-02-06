@@ -6,9 +6,7 @@ tasks:
     default:
         desc: "Git overview"
         cmds:
-            - "git status && echo"
-            - "git log --oneline --graph --decorate --all && echo"
-            - "git branch"
+            - "git status"
 
     publish:
         desc: "Commit all changes and push to remote with message"
