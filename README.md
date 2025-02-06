@@ -32,10 +32,10 @@ A collection of various aspects of Apple platform development.
 
 ## Tasks
 
-- `task tuist` Generate the Xcode workspace
-- `task tuist:install` # Install dependencies
-- `task tuist:test` # Run the tests
-- `task git:publish -- "Message"` # Publish changes via Git
+- `task tuist` - Generate the Xcode workspace
+- `task tuist:install` - Install dependencies
+- `task tuist:test` - Run the tests
+- `task git:publish -- "Message"` - Publish changes via Git
 
 ## Roadmap
 
