@@ -7,8 +7,7 @@ import DSACore
  \
  If you want to use the doubly linked list, you will need one more attribute `prev` to indicate the previous node in the linked list. Assume all nodes in the linked list are _0-indexed_.\
  \
- Implement the `MyLinkedList` class:\
- \
+ Implement the `MyLinkedList` class:
  - `MyLinkedList()` Initializes the `MyLinkedList` object.
  - `int get(int index)` Get the value of the `index^th` node in the linked list. If the index is invalid, return `-1`.
  - `void addAtHead(int val)` Add a node of value `val` before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
@@ -19,16 +18,16 @@ import DSACore
  - Problem: [Design Linked List](https://leetcode.com/problems/design-linked-list/)
  - Difficulty: Easy
  - Constraints:
- - `0 <= index, val <= 1000`
- - Please do not use the built-in LinkedList library.
- - At most `2000` calls will be made to `get`, `addAtHead`, `addAtTail`, `addAtIndex` and `deleteAtIndex`.
+     - `0 <= index, val <= 1000`
+     - Please do not use the built-in LinkedList library.
+     - At most `2000` calls will be made to `get`, `addAtHead`, `addAtTail`, `addAtIndex` and `deleteAtIndex`.
  - Topics:
- - Linked List
- - Design
+     - Linked List
+     - Design
  */
-typealias LeetCode = LeetCode0707
-
 struct LeetCode0707 {
+    typealias LeetCode = LeetCode0707
+    
     struct Input {
         enum Operations {
             case get
