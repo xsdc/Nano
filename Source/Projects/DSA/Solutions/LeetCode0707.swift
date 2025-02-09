@@ -46,7 +46,7 @@ struct LeetCode0707 {
     
     protocol Function: FunctionExecuting where Input == LeetCode.Input, Output == LeetCode.Output {}
     
-    struct Solution {
+    struct Functions {
         /**
          - ID: 0707
          - Problem: Design Linked List

@@ -8,7 +8,7 @@ typealias LeetCode = LeetCode0707
 @Test func test() {
     Problem<LeetCode.Input, LeetCode.Output>(
         solutions: [
-            Problem.Solution(LeetCode.Solution.Pointer.self)
+            Problem.Solution(LeetCode.Functions.Pointer.self)
         ],
         testCases: [
             Problem.TestCase(
