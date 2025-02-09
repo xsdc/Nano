@@ -16,7 +16,7 @@
 
 ## Overview
 
-A collection of various aspects of Apple platform development.
+A collection of various aspects of Apple platform development. From the depths of LeetCode to the heights of Core ML.
 
 ## Setup
 
