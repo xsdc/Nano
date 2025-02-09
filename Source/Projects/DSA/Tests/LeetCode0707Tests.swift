@@ -3,9 +3,9 @@ import DSACore
 
 @testable import DSASolutions
 
-typealias LeetCode = LeetCode0707
-
 @Test func test() {
+    typealias LeetCode = LeetCode0707
+    
     Problem<LeetCode.Input, LeetCode.Output>(
         solutions: [
             Problem.Solution(LeetCode.Functions.Pointer.self)
