@@ -5,8 +5,8 @@ import DSACore
  \
  A node in a singly linked list should have two attributes: `val` and `next`. `val` is the value of the current node, and `next` is a pointer/reference to the next node.\
  \
- If you want to use the doubly linked list, you will need one more attribute `prev` to indicate the previous node in the linked list. Assume all nodes in the linked list are _0-indexed_.\
- \
+ If you want to use the doubly linked list, you will need one more attribute `prev` to indicate the previous node in the linked list. Assume all nodes in the linked list are _0-indexed_.
+ 
  Implement the `MyLinkedList` class:
  - `MyLinkedList()` Initializes the `MyLinkedList` object.
  - `int get(int index)` Get the value of the `index^th` node in the linked list. If the index is invalid, return `-1`.
