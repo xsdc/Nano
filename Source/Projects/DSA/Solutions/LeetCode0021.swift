@@ -46,7 +46,7 @@ where Input == LeetCode0021.Input, Output == LeetCode0021.Output {}
 /**
  - ID: 0021
  - Problem: Merge Two Sorted Lists
- - Solution: Pointer
+ - Solution: Iteration
  - Time complexity:
  - Space complexity:
  */
@@ -56,7 +56,24 @@ struct Pointer_LeetCode0021Solution: LeetCode0021Solution {
             _ list1: LeetCode0021.ListNode?,
             _ list2: LeetCode0021.ListNode?
         ) -> LeetCode0021.ListNode? {
-            return nil
+            let placeholderListNode = LeetCode0021.ListNode()
+            var p = list1
+            var b = list2
+            var o: LeetCode0021.ListNode? = placeholderListNode
+            
+            while let q = p, let d = b {
+                let dValueGreater = d.val > q.val
+                
+                p = dValueGreater ? q.next : q
+                b = dValueGreater ? d : d.next
+                
+                o?.next = dValueGreater ? q : d
+                o = o?.next
+            }
+            
+            o?.next = p ?? b
+            
+            return placeholderListNode.next
         }
         
         return LeetCode0021.Output(
@@ -78,7 +95,15 @@ struct Recursive_LeetCode0021Solution: LeetCode0021Solution {
             _ list1: LeetCode0021.ListNode?,
             _ list2: LeetCode0021.ListNode?
         ) -> LeetCode0021.ListNode? {
-            return nil
+            guard let p = list1 else { return list2 }
+            guard let b = list2 else { return list1 }
+            if p.val < b.val {
+                p.next = mergeTwoLists(p.next, b)
+                return p
+            } else {
+                b.next = mergeTwoLists(p, b.next)
+                return b
+            }
         }
         
         return LeetCode0021.Output(
