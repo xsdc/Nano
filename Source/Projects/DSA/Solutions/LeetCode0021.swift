@@ -97,17 +97,22 @@ struct Recursive_LeetCode0021Solution: LeetCode0021Solution {
         ) -> LeetCode0021.ListNode? {
             guard let p = list1 else { return list2 }
             guard let b = list2 else { return list1 }
+            
             if p.val < b.val {
                 p.next = mergeTwoLists(p.next, b)
                 return p
-            } else {
+            }
+            else {
                 b.next = mergeTwoLists(p, b.next)
                 return b
             }
         }
         
         return LeetCode0021.Output(
-            mergedList: mergeTwoLists(input.list1, input.list2)
+            mergedList: mergeTwoLists(
+                input.list1,
+                input.list2
+            )
         )
     }
 }
