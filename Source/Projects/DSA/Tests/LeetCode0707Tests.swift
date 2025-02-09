@@ -3,7 +3,7 @@ import DSACore
 
 @testable import DSASolutions
 
-@Test func test() {
+@Test func testLeetCode0707() {
     typealias LeetCode = LeetCode0707
     
     Problem<LeetCode.Input, LeetCode.Output>(
