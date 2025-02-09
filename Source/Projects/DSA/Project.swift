@@ -24,6 +24,17 @@ let project = Project(
             ]
         ),
         .target(
+            name: "DSATechniques",
+            destinations: .macOS,
+            product: .framework,
+            bundleId: "dsa.techniques",
+            deploymentTargets: .macOS("15.1.1"),
+            sources: ["Techniques/**"],
+            dependencies: [
+                .target(name: "DSACore")
+            ]
+        ),
+        .target(
             name: "DSATests",
             destinations: .macOS,
             product: .unitTests,
